@@ -5,16 +5,20 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Marcos Mendonça | Proteção Veicular New Assist</title>
-
-<meta name="description" content="Proteja seu veículo com a New Assist. Atendimento personalizado com Marcos Mendonça. Cotação rápida pelo WhatsApp.">
-
+<meta property="og:title"
+content="Proteção Veicular New Assist">
+<meta property="og:description"
+content="Proteja seu veículo com economia e sem burocracia.">
+<meta property="og:image"
+content="https://raw.githubusercontent.com/alandeschampsofc/marcosmendonca/main/favicon.jpg">
 <meta name="keywords" content="proteção veicular, seguro auto, proteção automotiva, New Assist, Marcos Mendonça">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+<!-- Alterado para a fonte Poppins, que é moderna, limpa e sem serifa -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+
+/* ==========================================
+   CORES GLOBAIS DA LANDING PAGE
+========================================== */
 
 :root{
 --primary:#071c38;
@@ -24,6 +28,10 @@
 --dark:#091425;
 --text:#1d2433;
 }
+
+/* ==========================================
+   RESET GERAL
+========================================== */
 
 *{
 margin:0;
@@ -36,10 +44,11 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:'Inter',sans-serif;
+font-family:'Poppins', sans-serif;
 color:var(--text);
 background:#fff;
 line-height:1.6;
+font-size:16px; /* Reduzido de 18px para 16px */
 }
 
 .container{
@@ -48,6 +57,20 @@ max-width:1200px;
 margin:auto;
 padding:0 20px;
 }
+
+/* ==========================================
+   UTILITÁRIOS (GRIDS)
+========================================== */
+
+.grid-3 {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+/* ==========================================
+   HEADER / MENU SUPERIOR
+========================================== */
 
 header{
 position:fixed;
@@ -66,11 +89,29 @@ align-items:center;
 padding:18px 0;
 }
 
+/* ==========================================
+   LOGO NEW ASSIST
+========================================== */
+
 .logo{
+display:flex;
+align-items:center;
+gap:10px;
 color:#fff;
-font-size:28px;
+font-size:28px; /* Reduzido de 30px para 28px */
 font-weight:800;
 }
+
+.logo-icon{
+height:42px;
+width:auto;
+display:block;
+filter:drop-shadow(0 2px 4px rgba(0,0,0,.25));
+}
+
+/* ==========================================
+   MENU DE NAVEGAÇÃO
+========================================== */
 
 nav{
 display:flex;
@@ -81,7 +122,12 @@ nav a{
 color:#fff;
 text-decoration:none;
 font-weight:500;
+font-size:16px; /* Reduzido de 18 para 16 */
 }
+
+/* ==========================================
+   BOTÕES GERAIS (CTA)
+========================================== */
 
 .btn{
 background:var(--accent);
@@ -90,6 +136,7 @@ text-decoration:none;
 padding:14px 24px;
 border-radius:12px;
 font-weight:700;
+font-size:16px; /* Reduzido de 18 para 16 */
 display:inline-block;
 transition:.3s;
 cursor:pointer;
@@ -100,6 +147,10 @@ border:none;
 transform:translateY(-3px);
 }
 
+/* ==========================================
+   SEÇÃO DE COTAÇÃO (HERO MOVIDA)
+========================================== */
+
 .hero{
 background:
 linear-gradient(
@@ -108,11 +159,9 @@ var(--primary),
 var(--secondary)
 );
 color:white;
-min-height:100vh;
 display:flex;
 align-items:center;
-padding-top:120px;
-padding-bottom:80px;
+padding:100px 0; /* Ajustado pois não está mais no topo */
 }
 
 .hero-grid{
@@ -122,24 +171,32 @@ gap:60px;
 align-items:center;
 }
 
+/* ==========================================
+   SELO DA SESSÃO DE COTAÇÃO
+========================================== */
+
 .badge{
 display:inline-block;
 background:rgba(255,255,255,.12);
 padding:10px 18px;
 border-radius:50px;
 margin-bottom:20px;
-font-size:14px;
+font-size:14px; /* Reduzido de 16px para 14px */
 font-weight:700;
 }
 
+/* ==========================================
+   TEXTOS DA SESSÃO DE COTAÇÃO
+========================================== */
+
 .hero h1{
-font-size:56px;
+font-size:56px; /* Reduzido de 58px para 56px */
 line-height:1.1;
 margin-bottom:25px;
 }
 
 .hero p{
-font-size:18px;
+font-size:18px; /* Reduzido de 20px para 18px */
 margin-bottom:15px;
 }
 
@@ -152,6 +209,10 @@ margin-bottom:10px;
 font-weight:500;
 }
 
+/* ==========================================
+   FORMULÁRIO DE COTAÇÃO
+========================================== */
+
 .form-card{
 background:white;
 padding:35px;
@@ -163,6 +224,7 @@ color:#222;
 .form-card h2{
 margin-bottom:25px;
 text-align:center;
+font-size: 24px; /* Reduzido de 26px para 24px */
 }
 
 .form-card input,
@@ -172,7 +234,7 @@ padding:14px;
 border:1px solid #ddd;
 border-radius:10px;
 margin-bottom:12px;
-font-size:15px;
+font-size:15px; /* Reduzido de 17px para 15px */
 }
 
 .form-card button{
@@ -180,30 +242,51 @@ width:100%;
 margin-top:10px;
 }
 
+/* ==========================================
+   SEÇÃO CONSULTOR MARCOS MENDONÇA (AGORA NO TOPO)
+========================================== */
+
 .consultor{
-padding:90px 0;
-background:#fff;
+padding:140px 0 100px; /* Padding superior aumentado para não conflitar com o menu fixo */
+background:linear-gradient(
+180deg,
+#ffffff 0%,
+#f8fbff 100%
+);
 }
 
 .consultor-grid{
 display:grid;
-grid-template-columns:320px 1fr;
+grid-template-columns:420px 1fr;
 gap:50px;
 align-items:center;
 }
 
-.consultor-foto{
-text-align:center;
-}
+/* ==========================================
+   FOTO CONSULTOR
+========================================== */
 
 .consultor-foto img{
-width:280px;
-height:280px;
+width:380px;
+height:480px;
 object-fit:cover;
-border-radius:50%;
-box-shadow:0 20px 40px rgba(0,0,0,.15);
-border:8px solid white;
+border-radius:24px;
+box-shadow:0 25px 60px rgba(0,0,0,.20);
+border:6px solid white;
+transition:.3s;
 }
+
+/* ==========================================
+   HOVER FOTO CONSULTOR
+========================================== */
+
+.consultor-foto img:hover{
+transform:translateY(-5px);
+}
+
+/* ==========================================
+   SELO CONSULTOR ESPECIALISTA
+========================================== */
 
 .consultor-badge{
 display:inline-block;
@@ -211,20 +294,26 @@ background:var(--accent);
 color:white;
 padding:8px 14px;
 border-radius:50px;
-font-size:12px;
+font-size:12px; /* Reduzido de 14px para 12px */
 font-weight:700;
 margin-bottom:15px;
 }
 
+/* ==========================================
+   INFORMAÇÕES CONSULTOR
+========================================== */
+
 .consultor-info h2{
-font-size:42px;
-margin-bottom:20px;
+font-size:54px; /* Reduzido de 56px para 54px */
+margin-bottom:25px;
 color:var(--primary);
 }
 
 .consultor-info p{
-font-size:18px;
-margin-bottom:12px;
+font-size:21px; /* Reduzido de 23px para 21px */
+line-height:1.8;
+margin-bottom:18px;
+color:#2d3748;
 }
 
 .consultor-info ul{
@@ -234,23 +323,72 @@ margin-bottom:25px;
 }
 
 .consultor-info li{
-margin-bottom:10px;
-font-size:17px;
+margin-bottom:12px;
+font-size:20px; /* Reduzido de 22px para 20px */
+font-weight:500;
 }
+
+/* ==========================================
+   SEÇÃO CONFIANÇA
+   (ASSOCIAÇÃO DESDE 2018)
+========================================== */
+
+.trust{
+padding:30px 0;
+margin-bottom:40px;
+background:#f8fbff;
+}
+
+/* ==========================================
+   CARDS DA SEÇÃO DE BENEFÍCIOS (COBERTURAS)
+========================================== */
+
+.card {
+background: rgba(255, 255, 255, 0.05); 
+padding: 25px;
+border-radius: 16px;
+border: 1px solid rgba(255, 255, 255, 0.1);
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-5px);
+background: rgba(255, 255, 255, 0.1);
+}
+
+.card h3 {
+color: #ffffff; 
+margin-bottom: 10px;
+font-size: 20px; /* Reduzido de 22px para 20px */
+}
+
+.card p {
+color: #d8e1ec; 
+font-size: 16px; /* Reduzido de 18px para 16px */
+}
+
+/* ==========================================
+   RESPONSIVIDADE MOBILE
+========================================== */
 
 @media(max-width:900px){
 
 .hero-grid,
-.consultor-grid{
+.consultor-grid,
+.grid-3{
 grid-template-columns:1fr;
 }
 
 .hero h1{
-font-size:38px;
+font-size:38px; /* Reduzido de 40px para 38px */
 }
 
 nav{
 display:none;
+}
+
+.consultor {
+padding: 120px 0 60px; /* Ajuste mobile para o menu não cobrir a foto */
 }
 
 }
@@ -261,17 +399,28 @@ display:none;
 
 <body>
 
+<!-- ==========================================
+   HEADER / MENU SUPERIOR
+========================================== -->
 <header>
 
 <div class="container header-container">
 
 <div class="logo">
-NEW ASSIST
+
+<img
+src="https://raw.githubusercontent.com/alandeschampsofc/marcosmendonca/main/logonewassist.png"
+alt="New Assist"
+class="logo-icon">
+
+<span>NEW ASSIST</span>
+
 </div>
 
 <nav>
 <a href="#beneficios">Benefícios</a>
 <a href="#comparativo">Comparativo</a>
+<a href="#cotacao">Solicitar Cotação</a>
 <a href="#faq">FAQ</a>
 </nav>
 
@@ -279,14 +428,391 @@ NEW ASSIST
 href="https://wa.me/5521970122261"
 target="_blank"
 class="btn">
-WhatsApp
+WHATSAPP
 </a>
 
 </div>
 
 </header>
 
-<section class="hero">
+<!-- ==========================================
+   SEÇÃO CONSULTOR MARCOS MENDONÇA (AGORA É O TOPO)
+========================================== -->
+<section class="consultor">
+
+<div class="container consultor-grid">
+
+<div class="consultor-foto">
+
+<img
+src="https://raw.githubusercontent.com/alandeschampsofc/marcosmendonca/main/marcosmendonca.jpg"
+alt="Marcos Mendonça">
+
+</div>
+
+<div class="consultor-info">
+
+<div class="consultor-badge">
+CONSULTOR ESPECIALISTA
+</div>
+
+<h2>
+Marcos Mendonça
+</h2>
+
+<p>
+Atendimento especializado em proteção veicular,
+motoristas de aplicativo e veículos de leilão.
+</p>
+
+<p>
+Receba uma análise personalizada e descubra
+o plano ideal para seu veículo.
+</p>
+
+<ul>
+<li>✓ Cotação rápida</li>
+<li>✓ Atendimento via WhatsApp</li>
+<li>✓ Suporte durante todo processo</li>
+<li>✓ Planos personalizados</li>
+</ul>
+
+<a
+href="https://wa.me/5521970122261"
+target="_blank"
+class="btn">
+FALE COMIGO
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+   SEÇÃO CONFIANÇA (ASSOCIAÇÃO DESDE 2018)
+========================================== -->
+<section class="trust" style="margin-bottom:50px;">
+
+<div class="container">
+
+<div class="grid-3" style="text-align:center;">
+
+<div style="
+background:#091425;
+color:white;
+padding:25px;
+border-radius:16px;
+">
+<h3 style="font-size: 20px;">✓ Associação desde 2018</h3>
+<p style="font-size: 16px;">Atuação consolidada no mercado.</p>
+</div>
+
+<div style="
+background:#091425;
+color:white;
+padding:25px;
+border-radius:16px;
+">
+<h3 style="font-size: 20px;">✓ Atendimento Humanizado</h3>
+<p style="font-size: 16px;">Suporte rápido e especializado.</p>
+</div>
+
+<div style="
+background:#091425;
+color:white;
+padding:25px;
+border-radius:16px;
+">
+<h3 style="font-size: 20px;">✓ Cobertura Nacional</h3>
+<p style="font-size: 16px;">Proteção em todo o Brasil.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+   SEÇÃO BENEFÍCIOS (COBERTURAS) - MANTIDA AZUL
+========================================== -->
+<section id="beneficios" style="padding:90px 0; background:linear-gradient(135deg, var(--primary), var(--secondary));">
+
+<div class="container">
+
+<h2 style="
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color: #ffffff;
+">
+Coberturas Completas
+</h2>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>🚗 Roubo e Furto</h3>
+<p>Proteção patrimonial completa para seu veículo.</p>
+</div>
+
+<div class="card">
+<h3>💥 Colisão</h3>
+<p>Cobertura para danos parciais e perda total.</p>
+</div>
+
+<div class="card">
+<h3>🛡️ Danos a Terceiros</h3>
+<p>Mais tranquilidade em acidentes envolvendo terceiros.</p>
+</div>
+
+<div class="card">
+<h3>🚛 Assistência 24h</h3>
+<p>Guincho, chaveiro, pane seca e socorro elétrico.</p>
+</div>
+
+<div class="card">
+<h3>🪟 Proteção de Vidros</h3>
+<p>Troca e reparo de vidros, retrovisores e lanternas.</p>
+</div>
+
+<div class="card">
+<h3>🚘 Carro Reserva</h3>
+<p>Você continua sua rotina normalmente.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+   SEÇÃO COMPARATIVO - ALTERADA PARA AZUL ESCURO
+========================================== -->
+<section id="comparativo" style="padding:90px 0; background:linear-gradient(135deg, var(--primary), var(--secondary));">
+
+<div class="container">
+
+<h2 style="
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color: #ffffff; /* Título em branco para o fundo azul */
+">
+Compare e Economize
+</h2>
+
+<div style="overflow:auto;">
+
+<table style="
+width:100%;
+border-collapse:collapse;
+background: rgba(255, 255, 255, 0.03); /* Fundo muito leve para a tabela toda */
+border-radius: 12px;
+overflow: hidden;
+">
+
+<tr>
+
+<th style="
+background:rgba(255,255,255,0.1); /* Um pouco transparente para não chapar no azul */
+color:white;
+padding:18px;
+font-size: 16px;
+">
+Critério
+</th>
+
+<th style="
+background:rgba(255,255,255,0.1); /* Um pouco transparente para não chapar no azul */
+color:white;
+padding:18px;
+font-size: 16px;
+">
+Seguro Tradicional
+</th>
+
+<th style="
+background:#16c172; /* Mantém o verde de destaque na New Assist */
+color:white;
+padding:18px;
+font-size: 16px;
+">
+New Assist
+</th>
+
+</tr>
+
+<tr>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #d8e1ec;">Análise de Perfil</td>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #d8e1ec;">Obrigatória</td>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #ffffff; font-weight: 500;">Sem análise rígida</td>
+</tr>
+
+<tr>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #d8e1ec;">SPC/Serasa</td>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #d8e1ec;">Consulta</td>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #ffffff; font-weight: 500;">Sem consulta</td>
+</tr>
+
+<tr>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #d8e1ec;">Motorista APP</td>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #d8e1ec;">Taxas elevadas</td>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #ffffff; font-weight: 500;">Plano especial</td>
+</tr>
+
+<tr>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #d8e1ec;">Veículo de Leilão</td>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #d8e1ec;">Restrições</td>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #ffffff; font-weight: 500;">Aceitação facilitada</td>
+</tr>
+
+<tr>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #d8e1ec;">Mensalidade</td>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #d8e1ec;">Mais alta</td>
+<td style="padding:15px; border:1px solid rgba(255,255,255,0.15); color: #ffffff; font-weight: 500;">Até 40% mais econômica</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+   SEÇÃO CLUBE DE BENEFÍCIOS / APP - ALTERADA PARA FUNDO CLARO
+========================================== -->
+<section class="section" style="
+background:#ffffff; /* Alterado para branco claro */
+padding:100px 0;
+">
+
+<div class="container">
+
+<div style="
+display:grid;
+grid-template-columns:1.4fr 1fr;
+gap:60px;
+align-items:center;
+">
+
+<!-- COLUNA ESQUERDA -->
+
+<div>
+
+<h2 style="
+font-size:30px; 
+margin-bottom:20px;
+color:var(--primary); /* Alterado de branco para azul escuro */
+">
+Clube de Benefícios
+</h2>
+
+<p style="
+font-size:18px; 
+line-height:1.8;
+margin-bottom:35px;
+color:#2d3748; /* Alterado de azul bebê para cinza escuro */
+">
+Tenha acesso a descontos em diversos estabelecimentos,
+assistência 24h e suporte especializado através do programa
+de benefícios da associação.
+</p>
+
+<h3 style="
+font-size:22px; 
+margin-bottom:20px;
+color:var(--primary); /* Alterado de branco para azul escuro */
+">
+Tudo na palma da sua mão
+</h3>
+
+<p style="
+font-size:18px; 
+line-height:1.8;
+margin-bottom:25px;
+color:#2d3748; /* Alterado de azul bebê para cinza escuro */
+">
+Com o aplicativo New Assist você pode acessar boletos,
+solicitar assistência 24 horas, consultar informações
+da proteção veicular e aproveitar descontos exclusivos.
+</p>
+
+<p style="
+margin-bottom:12px;
+color:#16c172; /* Mantido verde */
+font-weight:600;
+font-size:16px;
+">
+✓ Assistência 24h
+</p>
+
+<p style="
+margin-bottom:12px;
+color:#16c172; /* Mantido verde */
+font-weight:600;
+font-size:16px;
+">
+✓ Clube de benefícios
+</p>
+
+<p style="
+margin-bottom:12px;
+color:#16c172; /* Mantido verde */
+font-weight:600;
+font-size:16px;
+">
+✓ Segunda via de boletos
+</p>
+
+<p style="
+margin-bottom:12px;
+color:#16c172; /* Mantido verde */
+font-weight:600;
+font-size:16px;
+">
+✓ Atendimento rápido
+</p>
+
+</div>
+
+<!-- COLUNA DIREITA -->
+
+<div style="
+display:flex;
+justify-content:center;
+align-items:center;
+">
+
+<img
+src="https://raw.githubusercontent.com/alandeschampsofc/marcosmendonca/main/logoapp.jpg"
+alt="Aplicativo New Assist"
+style="
+width:100%;
+max-width:320px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15); /* Sombra ajustada para fundo claro */
+border:4px solid #f4f7fb; /* Borda ajustada para fundo claro */
+"
+>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+   SEÇÃO DE COTAÇÃO (FORMULÁRIO MOVIDO PARA CÁ)
+========================================== -->
+<section class="hero" id="cotacao">
 
 <div class="container hero-grid">
 
@@ -376,7 +902,7 @@ required>
 <button
 type="submit"
 class="btn">
-QUERO MINHA COTAÇÃO
+SOLICITAR COTAÇÃO
 </button>
 
 </form>
@@ -387,371 +913,9 @@ QUERO MINHA COTAÇÃO
 
 </section>
 
-<section class="consultor">
-
-<div class="container consultor-grid">
-
-<div class="consultor-foto">
-
-<img
-src="COLE_AQUI_A_URL_DA_FOTO_DO_MARCOS"
-alt="Marcos Mendonça">
-
-</div>
-
-<div class="consultor-info">
-
-<div class="consultor-badge">
-CONSULTOR ESPECIALISTA
-</div>
-
-<h2>
-Marcos Mendonça
-</h2>
-
-<p>
-Atendimento especializado em proteção veicular,
-motoristas de aplicativo e veículos de leilão.
-</p>
-
-<p>
-Receba uma análise personalizada e descubra
-o plano ideal para seu veículo.
-</p>
-
-<ul>
-<li>✓ Cotação rápida</li>
-<li>✓ Atendimento via WhatsApp</li>
-<li>✓ Suporte durante todo processo</li>
-<li>✓ Planos personalizados</li>
-</ul>
-
-<a
-href="https://wa.me/5521970122261"
-target="_blank"
-class="btn">
-FALAR COM MARCOS
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="trust">
-
-<div class="container">
-
-<div style="
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-text-align:center;
-">
-
-<div style="
-background:#091425;
-color:white;
-padding:25px;
-border-radius:16px;
-">
-<h3>✓ Associação desde 2018</h3>
-<p>Atuação consolidada no mercado.</p>
-</div>
-
-<div style="
-background:#091425;
-color:white;
-padding:25px;
-border-radius:16px;
-">
-<h3>✓ Atendimento Humanizado</h3>
-<p>Suporte rápido e especializado.</p>
-</div>
-
-<div style="
-background:#091425;
-color:white;
-padding:25px;
-border-radius:16px;
-">
-<h3>✓ Cobertura Nacional</h3>
-<p>Proteção em todo o Brasil.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="beneficios" style="padding:90px 0;background:#f4f7fb;">
-
-<div class="container">
-
-<h2 style="
-text-align:center;
-font-size:42px;
-margin-bottom:50px;
-">
-Coberturas Completas
-</h2>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-">
-
-<div class="card">
-<h3>🚗 Roubo e Furto</h3>
-<p>Proteção patrimonial completa para seu veículo.</p>
-</div>
-
-<div class="card">
-<h3>💥 Colisão</h3>
-<p>Cobertura para danos parciais e perda total.</p>
-</div>
-
-<div class="card">
-<h3>🛡️ Danos a Terceiros</h3>
-<p>Mais tranquilidade em acidentes envolvendo terceiros.</p>
-</div>
-
-<div class="card">
-<h3>🚛 Assistência 24h</h3>
-<p>Guincho, chaveiro, pane seca e socorro elétrico.</p>
-</div>
-
-<div class="card">
-<h3>🪟 Proteção de Vidros</h3>
-<p>Troca e reparo de vidros, retrovisores e lanternas.</p>
-</div>
-
-<div class="card">
-<h3>🚘 Carro Reserva</h3>
-<p>Você continua sua rotina normalmente.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="comparativo" style="padding:90px 0;">
-
-<div class="container">
-
-<h2 style="
-text-align:center;
-font-size:42px;
-margin-bottom:50px;
-">
-Compare e Economize
-</h2>
-
-<div style="overflow:auto;">
-
-<table style="
-width:100%;
-border-collapse:collapse;
-">
-
-<tr>
-
-<th style="
-background:#071c38;
-color:white;
-padding:18px;
-">
-Critério
-</th>
-
-<th style="
-background:#071c38;
-color:white;
-padding:18px;
-">
-Seguro Tradicional
-</th>
-
-<th style="
-background:#16c172;
-color:white;
-padding:18px;
-">
-New Assist
-</th>
-
-</tr>
-
-<tr>
-<td style="padding:15px;border:1px solid #ddd;">Análise de Perfil</td>
-<td style="padding:15px;border:1px solid #ddd;">Obrigatória</td>
-<td style="padding:15px;border:1px solid #ddd;">Sem análise rígida</td>
-</tr>
-
-<tr>
-<td style="padding:15px;border:1px solid #ddd;">SPC/Serasa</td>
-<td style="padding:15px;border:1px solid #ddd;">Consulta</td>
-<td style="padding:15px;border:1px solid #ddd;">Sem consulta</td>
-</tr>
-
-<tr>
-<td style="padding:15px;border:1px solid #ddd;">Motorista APP</td>
-<td style="padding:15px;border:1px solid #ddd;">Taxas elevadas</td>
-<td style="padding:15px;border:1px solid #ddd;">Plano especial</td>
-</tr>
-
-<tr>
-<td style="padding:15px;border:1px solid #ddd;">Veículo de Leilão</td>
-<td style="padding:15px;border:1px solid #ddd;">Restrições</td>
-<td style="padding:15px;border:1px solid #ddd;">Aceitação facilitada</td>
-</tr>
-
-<tr>
-<td style="padding:15px;border:1px solid #ddd;">Mensalidade</td>
-<td style="padding:15px;border:1px solid #ddd;">Mais alta</td>
-<td style="padding:15px;border:1px solid #ddd;">Até 40% mais econômica</td>
-</tr>
-
-</table>
-
-</div>
-
-</div>
-
-</section>
-
-<section style="
-padding:90px 0;
-background:#f4f7fb;
-">
-
-<div class="container">
-
-<div style="
-background:white;
-padding:50px;
-border-radius:24px;
-box-shadow:0 10px 40px rgba(0,0,0,.08);
-">
-
-<h2>
-Como Funciona o Rateio?
-</h2>
-
-<br>
-
-<p>
-O sistema mutualista distribui proporcionalmente os custos
-do grupo entre os associados, proporcionando mais
-economia e acessibilidade.
-</p>
-
-<br>
-
-<p>
-Parte da mensalidade corresponde à taxa administrativa
-e outra parte ao rateio dos eventos ocorridos no grupo,
-sempre seguindo critérios previamente definidos
-no regulamento da associação.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="container">
-
-<h2 class="section-title">
-Clube de Benefícios
-</h2>
-
-<p style="
-text-align:left;
-max-width:900px;
-margin:0 auto 50px;
-font-size:18px;
-line-height:1.8;
-">
-Tenha acesso a descontos em diversos estabelecimentos,
-assistência 24h e suporte especializado através do programa
-de benefícios da associação.
-</p>
-
-<div style="
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
-">
-
-<div>
-
-<h3 style="
-font-size:32px;
-margin-bottom:20px;
-color:#071c38;
-">
-Tudo na palma da sua mão
-</h3>
-
-<p style="
-font-size:18px;
-line-height:1.8;
-margin-bottom:20px;
-">
-Com o aplicativo New Assist você pode acessar boletos,
-solicitar assistência 24 horas, consultar informações
-da proteção veicular e aproveitar descontos exclusivos.
-</p>
-
-<p style="margin-bottom:10px;">
-✓ Assistência 24h
-</p>
-
-<p style="margin-bottom:10px;">
-✓ Clube de benefícios
-</p>
-
-<p style="margin-bottom:10px;">
-✓ Segunda via de boletos
-</p>
-
-<p style="margin-bottom:10px;">
-✓ Atendimento rápido
-</p>
-
-</div>
-
-<div style="text-align:center;">
-
-<img
-src="COLE_AQUI_A_URL_DA_IMAGEM_DO_APP"
-alt="Aplicativo New Assist"
-style="
-width:100%;
-max-width:350px;
-border-radius:30px;
-box-shadow:0 20px 50px rgba(0,0,0,.20);
-"
->
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
+<!-- ==========================================
+   SEÇÃO FAQ (PERGUNTAS FREQUENTES)
+========================================== -->
 <section id="faq" style="
 padding:90px 0;
 background:#f4f7fb;
@@ -761,15 +925,15 @@ background:#f4f7fb;
 
 <h2 style="
 text-align:center;
-font-size:42px;
+font-size:42px; /* Reduzido de 44px para 42px */
 margin-bottom:50px;
 ">
 Perguntas Frequentes
 </h2>
 
 <details>
-<summary>Como funciona a adesão?</summary>
-<p>
+<summary style="font-size: 18px; font-weight: 600; cursor: pointer;">Como funciona a adesão?</summary>
+<p style="margin-top: 10px;">
 O processo é simples, rápido e pode ser realizado digitalmente.
 </p>
 </details>
@@ -777,8 +941,8 @@ O processo é simples, rápido e pode ser realizado digitalmente.
 <br>
 
 <details>
-<summary>Motoristas de aplicativo podem aderir?</summary>
-<p>
+<summary style="font-size: 18px; font-weight: 600; cursor: pointer;">Motoristas de aplicativo podem aderir?</summary>
+<p style="margin-top: 10px;">
 Sim. Existem planos específicos para esse perfil.
 </p>
 </details>
@@ -786,8 +950,8 @@ Sim. Existem planos específicos para esse perfil.
 <br>
 
 <details>
-<summary>Veículos de leilão são aceitos?</summary>
-<p>
+<summary style="font-size: 18px; font-weight: 600; cursor: pointer;">Veículos de leilão são aceitos?</summary>
+<p style="margin-top: 10px;">
 Sim, mediante análise das condições do veículo.
 </p>
 </details>
@@ -795,8 +959,8 @@ Sim, mediante análise das condições do veículo.
 <br>
 
 <details>
-<summary>Existe participação em danos?</summary>
-<p>
+<summary style="font-size: 18px; font-weight: 600; cursor: pointer;">Existe participação em danos?</summary>
+<p style="margin-top: 10px;">
 Sim. Conforme regulamento da associação para eventos parciais.
 </p>
 </details>
@@ -805,40 +969,9 @@ Sim. Conforme regulamento da associação para eventos parciais.
 
 </section>
 
-<section style="
-padding:100px 0;
-background:linear-gradient(135deg,#071c38,#10386e);
-color:white;
-text-align:center;
-">
-
-<div class="container">
-
-<h2 style="
-font-size:48px;
-margin-bottom:20px;
-">
-Não dirija sem proteção.
-</h2>
-
-<p style="
-font-size:20px;
-margin-bottom:35px;
-">
-Solicite agora sua cotação personalizada.
-</p>
-
-<a
-href="https://wa.me/5521970122261"
-target="_blank"
-class="btn">
-FAZER COTAÇÃO AGORA
-</a>
-
-</div>
-
-</section>
-
+<!-- ==========================================
+   RODAPÉ (FOOTER)
+========================================== -->
 <footer style="
 background:#07101f;
 color:white;
@@ -847,7 +980,7 @@ padding:60px 0;
 
 <div class="container">
 
-<h3>New Assist Clube de Benefícios</h3>
+<h3 style="font-size: 22px;">New Assist Clube de Benefícios</h3>
 
 <br>
 
@@ -870,7 +1003,7 @@ Corretor Responsável:
 WhatsApp:
 <a
 href="https://wa.me/5521970122261"
-style="color:#16c172;">
+style="color:#16c172; text-decoration: none;">
 (21) 97012-2261
 </a>
 </p>
@@ -881,6 +1014,9 @@ style="color:#16c172;">
 
 </footer>
 
+<!-- ==========================================
+   BOTÃO FLUTUANTE WHATSAPP
+========================================== -->
 <a
 href="https://wa.me/5521970122261"
 target="_blank"
@@ -900,6 +1036,9 @@ z-index:999;
 WhatsApp
 </a>
 
+<!-- ==========================================
+   SCRIPTS (FORMULÁRIO E INTEGRAÇÃO)
+========================================== -->
 <script>
 
 document.getElementById("cotacaoForm").addEventListener("submit", function(e){
@@ -915,8 +1054,7 @@ const cidade = document.getElementById("cidade").value;
 const app = document.getElementById("app").value;
 const leilao = document.getElementById("leilao").value;
 
-const mensagem =
-`🚗 NOVA SOLICITAÇÃO DE COTAÇÃO
+const mensagem = `🚗 NOVA SOLICITAÇÃO DE COTAÇÃO
 
 👤 Nome: ${nome}
 
