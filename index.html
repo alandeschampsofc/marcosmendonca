@@ -952,6 +952,12 @@ placeholder="Placa do Veículo (Opcional)">
 <option value="Não">Não</option>
 </select>
 
+<!-- NOVO CAMPO: INDICAÇÃO -->
+<input
+type="text"
+id="indicacao"
+placeholder="Foi indicado por alguém? (Nome - Opcional)">
+
 <button
 type="submit"
 class="btn">
@@ -1151,6 +1157,7 @@ const cambio = document.getElementById("cambio").value;
 const placa = document.getElementById("placa").value;
 const app = document.getElementById("app").value;
 const leilao = document.getElementById("leilao").value;
+const indicacao = document.getElementById("indicacao").value;
 
 const mensagem = `🚗 NOVA SOLICITAÇÃO DE COTAÇÃO
 
@@ -1169,6 +1176,8 @@ const mensagem = `🚗 NOVA SOLICITAÇÃO DE COTAÇÃO
 📲 Motorista de Aplicativo: ${app}
 
 🏷️ Veículo de Leilão: ${leilao}
+
+🤝 Indicação: ${indicacao ? indicacao : "Não informado"}
 
 Gostaria de receber uma cotação da New Assist.`;
 
